@@ -13,7 +13,7 @@ class ModelTests(TestCase):
         )
 
         self.assertEqual(user.email, email)
-        self.assertEqual(user.check_password(password), True)
+        self.assertTrue(user.check_password(password))
 
     def test_new_user_email_normalized(self):
         """Test email is normailzed for new users"""
